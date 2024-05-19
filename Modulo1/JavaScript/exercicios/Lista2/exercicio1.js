@@ -1,17 +1,16 @@
 // Nome: Flávio Soares Neves
-//tenho que ver melhor
+
 const recebe = require('prompt-sync')();
 
 //Exercicio 1
-let quantidadeCigarros = recebe("Digite o numero medio de cigarros que fuma no dia: ");
 let idadeFumou = 0;
-let resposta = 0
+let quantidadeCigarros = recebe("Digite o numero medio de cigarros que fuma no dia: ");
 if (!isNaN(quantidadeCigarros)){
-    quantidadeCigarros *= (16,67*24); // Calculando quantos horas fumou por dia
-
     idadeFumou = recebe("Digite quantos anos você está fumando: ");
     if (!isNaN(idadeFumou)){
-        10 * 365 
+        console.log(`Você ira perder ${((quantidadeCigarros * 365 * idadeFumou) / 1440).toFixed(1)} dias de sua via com cigarro`);
     }
+} else {
+    console.log("Favor digitar informações corretas")
 }
 
