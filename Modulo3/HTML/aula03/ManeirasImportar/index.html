@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Maneiras de importar as css</title>
+    <style>
+        @import url("estilo.css");
+         /* Maneira 1 */
+    </style>
+ <!--    <link rel="stylesheet" href="estilo.css">
+        maneira 2 -->
+    <style type="text/css">
+        .cor-paragrafo{
+            color: red;
+        }
+         a:visited { /* Visitado o link */
+            color: green;
+
+        }
+
+        a:hover { /* Mouse estive acima */
+            color: chocolate;
+            text-decoration: underline;
+            cursor: crosshair;
+        }
+
+        a:active { /* No momento que for ativado */
+            color: black;
+        }
+
+    </style>
+</head>
+<body id="principal">
+    <h1>Hello CSS</h1>
+    <!-- ID: é um indentificador unico para um item dentro do site
+    class: Permite manipular diversos componentes do site -->
+
+    <p class="cor-paragrafo">Lorem ipsum dolor sit amet consectetur, <span id="destaque">adipisicing elit</span>. Nisi ullam tempore rem delectus eveniet perspiciatis aspernatur praesentium ea. Illum dicta similique, provident nam eos earum dolorum dolores possimus nisi sunt.</p>
+
+    <p class="cor-paragrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, quae. Aperiam, ad. Deserunt in officia iusto consectetur vero culpa doloremque ducimus corrupti odio omnis, alias eveniet? Ipsum nostrum unde magnam.</p>
+
+
+    <li>
+        <ol><a href="pagina.html">Home</a></ol>
+        <ol><a href="pagina2.html">Produtos</a></ol>
+        <ol><a href="pagina3.html">Contato</a></ol>
+    </li>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+.listaNaoOrdenada {
+    list-style-type:georgian;
+}
+
+nav#menu {
+    border: 3px solid blue;
+    display: block;
+}
+
+nav#menu ul {
+    list-style-type: none;
+}
+
+nav#menu li {
+    border: 3px solid red;
+    display: inline-block;
+    background-color: black;
+    color: yellow;
+    padding: 10px;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+tr:hover {
+    background-color: blue;
+    color: white;
+    font-weight: 300;
+}
+tr, th, td {
+    border: 3px solid black;
+}

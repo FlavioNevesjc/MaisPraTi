@@ -1,0 +1,13 @@
+h1 {
+    color: blue;
+    /* color: rgb(100,100,100); */
+    /* color: #010101; */
+}
+
+#destaque{
+    color: azure;
+}
+
+#principal {
+    background-color: blueviolet;
+}
