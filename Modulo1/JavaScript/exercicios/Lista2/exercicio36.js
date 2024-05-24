@@ -1,5 +1,5 @@
 // Nome: Flávio Soares Neves
-// Não funciona ainda!!!!
+
 // Exercicio 36
 let matrizJogos = Array ();
 let criarNovoNumero = 0;
@@ -7,6 +7,7 @@ let verificador = 0;
 let numerosSorteado = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 numerosSorteado.sort(function(a,b) { return a - b});
 
+console.log(`Resultado dos numeros sorteados: ${numerosSorteado}`);
 for (let i=0;i<100;i++){
     matrizJogos[i] = Array ();
     for (let j=0;j<13;j++){
@@ -37,3 +38,6 @@ for (let i=0;i<100;i++){
         }
     }
 }
+
+console.log("Todas as apostas abaixo: ")
+console.log(matrizJogos);

@@ -1,7 +1,6 @@
 // Nome: Flávio Soares Neves
 
 const recebe = require('prompt-sync')();
-// Está dando errado na media (estranho!!!!)
 // Exercicio 10
 let continua = 's';
 let somaTotal = 0;
@@ -25,14 +24,13 @@ do {
         }
     }
     console.log("");
-    console.log(` somaTotal: ${somaTotal}, contador: ${contador}, ${typeof(contador)} menor ${menor}, contadorPar: ${contadorPar}`);
     continua = recebe("Deseja continuar? (s) (n): ");
     console.log("");
 } while (continua !== 'n')
 if (contador !== 0){
     console.log(`Somatória dos valores digitados são: ${somaTotal}`);
     console.log(`O menor valor digitado foi: ${menor}`);
-    console.log(`A média de todos os valores é: ${(parseFloat(valor/contador))}`);
+    console.log(`A média de todos os valores é: ${parseFloat((somaTotal)/contador)}`);
     console.log(`De todos os numeros digitados temos ${contadorPar} pares`);
 } else {
     console.log("Não tivemos nenhum numero digitado.");

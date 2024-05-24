@@ -1,5 +1,5 @@
 // Nome: Flávio Soares Neves
-// Está com erro!!!
+
 // Exercicio 27
 let matrizM = Array();
 let valorA = 10;
@@ -9,7 +9,7 @@ for (let i=0;i<6;i++){
     matrizM[i] = Array();
     for (let j=0;j<6;j++){
         matrizM[i][j] = parseInt((Math.random()*5).toFixed(0));
-        vetorV[cont] = matrizM * parseInt(valorA);
+        vetorV[cont] = matrizM[i][j] * parseInt(valorA);
         cont++;
     }
 }
