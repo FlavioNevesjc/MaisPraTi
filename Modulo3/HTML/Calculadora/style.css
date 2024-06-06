@@ -1,0 +1,17 @@
+body{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.resultado {
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: right;
+    width: 150px;
+}
+
+.botao {
+    height: 35px;
+    width: 35px;
+}

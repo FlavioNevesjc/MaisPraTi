@@ -1,0 +1,55 @@
+body{
+    width: 700px;
+    margin: 0 auto;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 700px;
+    background: #159cb0;
+    float: left;
+    border-radius: 10px;
+}
+
+ul li {
+    float: left;
+    display: block;
+    padding: 10px;
+}
+
+ul a {
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+ul .primeiroLink a {
+    background: none;
+}
+
+ul a:hover {
+    color: blueviolet;
+}
+
+
+h1{
+    text-align: center;
+}
+
+fieldset{
+    border-radius: 10px;
+}
+
+label{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input, select {
+    font-size: 15px;
+    border-radius: 10px;
+}

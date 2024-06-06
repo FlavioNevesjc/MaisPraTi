@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <ul>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a href="consulta.html">Consulta</a></li>
+   </ul>
+   <h1>Cadastro de alunos</h1>
+   <form action="">
+    <fieldset>
+        <legend> Dados do aluno</legend>
+        <label>Nome completo:</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto"><br><br>
+        <label>Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label>Aniversário:</label>
+        <input type="date" id="aniversario" name="aniversario"><br><br>
+        <label>Turma: </label>
+        <select id="turma" name="turma">
+            <option value="0" selected></option>
+            <option value="A">Turma A</option>
+            <option value="B">Turma B</option>
+            <option value="C">Turma C</option>
+          </select><br><br>
+        <input type="submit" value="Enviar">
+    </fieldset>
+   </form>  
+   <script src="script/script.js"></script> 
+</body>
+</html>
