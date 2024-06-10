@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript aplicando css</title>
+    <style>
+        .button_purple{
+            color: purple;
+        }
+        .button_text{
+            color: white;
+        }
+    </style>
+    <script>
+        function trocaEstilizacao(estilizacao){
+            document.body.style.background = estilizacao;
+            if ((estilizacao =='orange') || (estilizacao =='black')) {
+                document.getElementById('btn').className = 'button_purple';
+            } else {
+                document.getElementById('btn').className = 'button_text';
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="trocaEstilizacao('orange')" id="btn">Laranja</button>
+    <button type="button" onclick="trocaEstilizacao('red')"    id="btn">Vermelho</button>
+    <button type="button" onclick="trocaEstilizacao('yellow')" id="btn">Amarelo</button>
+    <button type="button" onclick="trocaEstilizacao('black')"  id="btn">Preto</button>
+    <button type="button" onclick="trocaEstilizacao('white')"  id="btn">Branco</button>
+</body>
+</html>

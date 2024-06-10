@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo JS</title>
+    <script>
+        // let nome = prompt('Digite seu nome: ');
+        // document.write(`<h1> Você digitou: ${nome}<h1>`);
+        
+        // let n1 = prompt('Digite o primeiro numero');
+        // let n2 = prompt('Digite o segundo numero');
+        // document.write(`<h2> A media é : ${(parseInt(n1)+parseInt(n2))/2}<h2>`);
+        function eventMouse() {
+            document.write('Evento aconteceu!!!')
+        }
+    </script>
+</head>
+<body>
+    <div style="background-color: blue; width: 200px; height: 200px;" onmousemove="eventMouse()" ></div>
+    <input onkeyup="eventMouse()" type="text">
+    <!-- <h1>Titulo 1</h1>
+    <input type="submit" id="nome">
+    <script src="script.js"></script> -->
+</body>
+</html>

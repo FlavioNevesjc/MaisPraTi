@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+    <script>
+        ///// 1
+        let janela
+        function popUp(){
+            janela = window.open("width=400,height=300");
+        }
+
+        function closePopUp(){
+           janela.close();
+        }
+
+        function print(){
+            janela.print();
+        }
+///// 2
+        // let height = window.screen.availHeight;
+        // let width = window.screen.availWidth;
+
+        // document.write(`Altura da tela ${height}`);
+        // document.write(`Largura da tela ${width}`);
+/// 3
+        let i = 10;
+        let x = windows.setInterval(() => {
+           document.write(i + '</br>');
+           i--;
+           if (i===0) {clearInterval(x)} 
+        }, 1000);
+
+
+</script>
+
+</head>
+<body>
+    <button onclick="popUp()">Abrir uma Janela</button>
+    <button onclick="closePopUp()">Fechar uma Janela</button>
+    <button onclick="print()">Imprimir uma Janela</button>
+
+    <button onclick="window.location.href = 'https://www.google.com.br'">Acessar o link</button>
+
+</body>
+</html>
