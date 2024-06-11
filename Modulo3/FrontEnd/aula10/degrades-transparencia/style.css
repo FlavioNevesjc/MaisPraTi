@@ -1,0 +1,11 @@
+#box{
+    width: 400px;
+    height: 400px;
+    /* background: url(Woody_Woodpecker.png); */
+    background: linear-gradient(0.35turn, blue, green,red);
+}
+#box h1{
+     /* background: rgba(3, 3, 3, 0.5); */
+     /* background: radial-gradient(red,green,yellow); */
+     background: linear-gradient(red,green,yellow);
+}

@@ -1,0 +1,22 @@
+#box {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: relative;
+    animation-name: animation-box;
+    animation-duration: 8s;
+}
+
+@keyframes animation-box {
+    form {
+        background: red;
+        border-radius: 0px;
+        top: 0;
+        left: 0;
+    } to {
+        background: orange;
+        border-radius: 100px;
+        top: 100px;
+        left: 100px
+    }
+}

@@ -19,26 +19,27 @@ class Aluno {
 class Database {
 
     constructor(){
-        const id = localStorage.getItem('id');
         if (id === null){
             localStorage.setItem('id',0);
         }
     }
 
-    getAlunos(){
-        const alunos = Array();
+    loadAlunos(){
+        const alunos = Array()
 
         const id = localStorage.getItem('id');
-        for (let i = 1; i<=id; i++){
+
+        for(let i = 1; i <= id; i++ ){
             const aluno = JSON.parse(localStorage.getItem(i));
 
-            if(alunos === null){
-                continue
+            if (aluno = null){
+                continue;
             }
+
             aluno.id = i;
-            aluno.push(alunos);
+            aluno.push(aluno);
         }
-        return alunos
+        return alunos;
     }
 
     createAluno(aluno){
@@ -52,10 +53,24 @@ class Database {
     }
 
     searchAluno(aluno){
-        const filteredAluno = Array();
+        let filteredAluno = Array();
+        
         filteredAluno = this.getAlunos();
+        
+        if (aluno.nomeCompleto !== ''){
+            filteredAluno = filteredAluno.filter(a => a.nomeCompleto === aluno.nomeCompleto);
+        }
+
         if (aluno.email !== ''){
             filteredAluno = filteredAluno.filter(a => a.email === aluno.email);
+        }
+
+        if (aluno.aniversario !== ''){
+            filteredAluno = filteredAluno.filter(a => a.aniversario === aluno.aniversario);
+        }
+
+        if (aluno.turma !== ''){
+            filteredAluno = filteredAluno.filter(a => a.turma === aluno.turma);
         }
 
         return filteredAluno
@@ -76,15 +91,21 @@ function registerAluno(){
     let turma        = document.getElementById('turma').value;
 
     const aluno = new Aluno(nomeCompleto, email, aniversario,turma);
+   
     if (aluno.validadeData()){
         database.createAluno(aluno);
     }
 }
 
-function loadAlunos(){
-    const alunos = database.getAlunos();
-
+function loadAlunos(alunos){
+    
+    if (alunos === undefined){
+        alunos = database.loadAlunos()
+    }
+    
+    
     const listAlunos = document.getElementById('listAlunos');
+    listAlunos.innerHTML = '';
 
     alunos.forEach((a)=> {
         const row = listAlunos.insertRow()
@@ -114,6 +135,19 @@ function loadAlunos(){
         }
         row.insertCell(3).append(btn);
     })
+}
+
+function searchAlunos(){
+    const nomeCompleto = document.getElementById('nomeCompleto').value;
+    const email        = document.getElementById('email').value;
+    const aniversario  = document.getElementById('aniversario').value;
+    const turma        = document.getElementById('turma').value;
+
+    const aluno = new Aluno(nomeCompleto, email, aniversario,turma);
+
+    const alunos = database.searchAlunos(aluno);
+
+    loadAlunos(alunos);
 }
 
 document.addEventListener('DOMContentLoaded',(event) => {
