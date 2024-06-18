@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes XML</title>
+    <script>
+        function getMovies() {
+            const xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.open('GET', 'filmes.xml');
+
+            xmlHttp.onreadystatechange = () => {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
+                    let XMLMovies = xmlHttp.responseText
+
+                    const parser = new DOMParser();
+
+                    const DOMMovies = parser.parseFromString(XMLMovies, 'text/xml');
+
+                    JSONMovies = xmlToJson(DOMMovies);
+
+                    for (let i in JSONMovies['filmes']['filmes']){
+                        let item = JSONMovies['filmes']['filmes'][i];
+                        
+                        let divRow = document.createElement('div');
+                        divRow.className = 'row';
+                        let divCol = document.createElement('div');
+                        divRow.className = 'col';
+
+                        let p1 = document.createElement('p');
+                        p1.innerHTML = '<strong>Titulo: </strong>' + item['titulo']['#text'];
+
+                        divRow.appendChild(divCol);
+                        divCol.appendChild(p1);
+
+                        document.getElementById('list').appendChild(divRow);
+                        
+                    }
+
+                }
+
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 404){
+                    console.log('Ferrou, chama o Dev');
+                }
+
+            xmlHttp.send()
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="container">
+            <div class="navbar-brand mb-0">
+                <h1>Catálogo de Filmes XML</h1>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="list">
+        <div class="row">
+            <button class="brn btn-primary" type="button" onclick="getFilmes()">Listar</button>
+        </div>
+    </div>
+</body>
+</html>
