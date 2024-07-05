@@ -1,0 +1,131 @@
+body {
+	background: url(../img/capa.png),
+				url(../img/ruido.png),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+main {
+    margin-top: 100px;
+}
+
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #9bf0e1;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.carousel-tamanho{
+   height: 400px;
+}
+
+.carrosel-centrado{
+    text-align: center;
+    padding: 100px;
+}
+
+.botao {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s; 
+}
+
+.botao:hover{
+    background-color: #7c26f8;
+    color: white;
+}
+
+
+.FundoBranco {
+    background-color: white;       
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fotos div img {
+    margin: 7px;
+    width: 250px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+}
+
+.titulo-roxo{
+    color: #7c26f8;
+    font-weight: bold;
+}
+
+.titulo {
+    width: 30%;
+}
+
+.titulo-branco {
+    color: white;
+    font-weight: bold;
+}
+
+.titulo-verde{
+    color: rgb(148, 226, 148);
+    font-weight: bold;
+}
+.iphone {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    width: auto;
+    height: 450px; 
+    transform: rotate(35deg);
+}
+
+footer{
+    background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.titulo-footer{
+    color: darkgray;
+    font-size: 12px;
+}
+
+.container div ul li{
+    list-style: none;
+    color: white;
+    font-size: 11px;
+}
+
+.container div ul li a:active{
+    text-decoration: none;
+}
+    
+
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+
+.div-footer{
+    display: flex;
+    justify-content:space-between;
+}
