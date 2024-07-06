@@ -1,0 +1,4 @@
+npm init -y
+npm install @babel/core babel-loader @babel/cli @babel/preset-env @babel/preset-react
+npm install webpack webpack-dev-server
+npm install react react-dom

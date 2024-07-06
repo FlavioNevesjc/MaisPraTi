@@ -1,0 +1,7 @@
+**** quando não for com vite
+npm init -y
+
+
+npm create vite@latest  
+npm install
+npm run dev
