@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 import Logo from './components/Logo'
-import Login from "./components/Login"
-import Footer from "./components/Footer"
+import Login from './components/Login'
+import Footer from './components/Footer'
 
 
 function App() {
