@@ -1,4 +1,4 @@
-package POO.encapsulation;
+package POO.bank.encapsulation;
 
 public class BankAccount {
     private String accountNumber;

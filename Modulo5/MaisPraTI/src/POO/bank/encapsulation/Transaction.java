@@ -1,4 +1,4 @@
-package POO.encapsulation;
+package POO.bank.encapsulation;
 
 public interface Transaction {
     void execute();

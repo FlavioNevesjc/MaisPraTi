@@ -1,4 +1,7 @@
 package polymorphism;
 
-public class Cat {
+class Cat extends Animal{
+    public void makeSound(){
+        System.out.println("O Gato mia: Miauuuuu");
+    }
 }

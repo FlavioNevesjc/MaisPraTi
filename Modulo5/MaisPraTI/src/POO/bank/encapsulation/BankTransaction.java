@@ -1,9 +1,10 @@
 package POO.bank.encapsulation;
 
-public class BankAccountTransaction implements Transaction{
+public class BankTransaction implements Transaction{
 
     private final BankAccount account;
     private final TransactionType type;
+    private final double amount;
 
     public enum TransactionType {
         DEPOSIT,

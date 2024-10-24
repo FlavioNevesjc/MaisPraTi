@@ -1,4 +1,5 @@
 package POO.area.encapsulation;
 
-public record Point() {
+public record Point(int x, int y) {
+
 }
